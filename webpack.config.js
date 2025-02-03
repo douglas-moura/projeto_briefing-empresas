@@ -14,7 +14,11 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/, // Processa arquivos CSS
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                use: [
+                    'style-loader', // Injeta CSS no DOM durante o desenvolvimento
+                    'css-loader', // Lê arquivos CSS
+                    'postcss-loader', // Processa o CSS com plugins (incluindo Tailwind)
+                ],
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/, // Processa imagens
