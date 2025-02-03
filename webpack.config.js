@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development', // Pode ser 'development' ou 'production'
-    entry: './src/index.js', // Arquivo de entrada principal
+    entry: './src/index.ts', // Arquivo de entrada principal
     output: {
         filename: 'index.js', // Nome do arquivo gerado
         path: path.resolve(__dirname, 'dist'), // Pasta de saída
@@ -28,6 +28,11 @@ module.exports = {
                 test: /\.html$/, // Processa arquivos HTML
                 use: ['html-loader'],
             },
+            {
+                test: /\.tsx?$/, // Para arquivos .ts e .tsx
+                use: 'ts-loader', // Transpila TypeScript para JavaScript
+                exclude: /node_modules/,
+            },
         ],
     },
     plugins: [
@@ -42,5 +47,8 @@ module.exports = {
     devServer: {
         static: './dist', // Pasta servida pelo dev server
         port: 3000, // Porta do servidor local
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'], // Permite importar arquivos sem especificar a extensão
     },
 };
