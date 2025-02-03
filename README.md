@@ -1,1 +1,1 @@
-# projeto__briefingEmpresas
+# projeto__briefing-empresas
