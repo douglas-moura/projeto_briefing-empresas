@@ -6,18 +6,278 @@
     <title>Briefing GTX100</title>
 </head>
 <body>
-    <main>
+    <main class="pb-32">
         <section>
-            <div class="container">
+            <div class="container my-8">
                 <h1 class="">Modelo simplificado de briefing para Campanhas de Incentivo</h1>
-                <p class="h4">ATENÇÃO: Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</p>
+                <h4 class="text-red-600">ATENÇÃO: Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</h4>
+            </div>
+        </section>
+        <section id="infos-empresa">
+            <div action="" class="container grid-cols-2">
+                <h3 class="titulo-sessao">Descreva sua empresa:</h3>
+                <span class="input-campo col-span-2">
+                    <label class="" for="">Empresa:</label>
+                    <input class="" type="text" name="" id="">
+                </span>
+                <span class="input-campo">
+                    <label for="">Vendas em 12 meses:</label>
+                    <input class="" type="text" name="" id="">
+                </span>
+                <span class="input-campo">
+                    <label class="" for="">Mercado:</label>
+                    <input class="" type="text" name="" id="">
+                </span>
+                <span class="input-campo">
+                    <label for="">Margem bruta:</label>
+                    <input class="" type="text" name="" id="">
+                </span>
+                <span class="input-campo">
+                    <label for="">Meta (%):</label>
+                    <input class="" type="text" name="" id="">
+                </span>
+                <span class="input-campo">
+                    <label for="">Participação de mercado:</label>
+                    <input class="" type="text" name="" id="">
+                </span>
+                <span class="input-campo">
+                    <label for="">Cresc. do ano anterior:</label>
+                    <input class="" type="text" name="" id="">
+                </span>
+            </div>
+        </section>
+        <section id="publicos">
+            <div class="container tabelas">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="titulo-tab w-3/12">Públicos alvo internos:</th>
+                            <th class="titulo-tab w-1/12">Qtd.:</th>
+                            <th class="titulo-tab w-3/12">Renda mensal média:</th>
+                            <th class="titulo-tab w-5/12">Observações:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Cargo">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 2">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: R$ 5.000">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Cargo">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 2">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: R$ 5.000">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="linha-tab cursor-pointer" colspan="4">
+                                Add Linha
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="titulo-tab w-3/12">Públicos alvo externos:</th>
+                            <th class="titulo-tab w-1/12">Qtd.:</th>
+                            <th class="titulo-tab w-3/12">Renda mensal média:</th>
+                            <th class="titulo-tab w-5/12">Observações:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Cargo">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 2">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: R$ 5.000">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Cargo">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 2">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: R$ 5.000">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="linha-tab cursor-pointer" colspan="4">
+                                Add Linha
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+        <section id="concorrentes">
+            <div class="container">
+                <h3 class="titulo-sessao">Descreva as caracteristicas do seu mercado:</h3>
+                <span class="input-campo">
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </span>
             </div>
             <div class="container">
-                <form action="">
-                    <span>
-                        <input type="text" name="" id="">
-                    </span>
-                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="titulo-tab w-3/12">Concorrentes:</th>
+                            <th class="titulo-tab w-7/12">Suas ações e caracteristicas principais:</th>
+                            <th class="titulo-tab w-2/12">Particip. de mercado:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Nome Empresa">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 5%">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Nome Empresa">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 5%">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Nome Empresa">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 5%">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container mb-4">
+                <h4>Comentários e observações importantes:</h4>
+                <span class="input-campo">
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </span>
+            </div>
+        </section>
+        <section id="outras-campanhas">
+            <div class="container">
+                <h3 class="titulo-sessao">Últimas campanhas:</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="titulo-tab w-2/12">Ano:</th>
+                            <th class="titulo-tab w-7/12">Descreva o sistema da campanha:</th>
+                            <th class="titulo-tab w-1/12">Período:</th>
+                            <th class="titulo-tab w-1/12">Meta (%):</th>
+                            <th class="titulo-tab w-1/12">Cresc. (%):</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 2024">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Aumento nos descontos e sorteio de viagens para copa para titulares e balconistas">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Anual">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 15%">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 9%">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 2024">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Aumento nos descontos e sorteio de viagens para copa para titulares e balconistas">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: Anual">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 15%">
+                            </td>
+                            <td class="linha-tab input-tab-intern">
+                                <input type="text" name="" id="" placeholder="Ex.: 9%">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="linha-tab cursor-pointer" colspan="4">
+                                Add Linha
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+        <section>
+            <div class="container grid-cols-3">
+                <h3 class="titulo-sessao col-span-3">Responsável pelo Briefing:</h3>
+                <span class="input-campo">
+                    <label for="">Preenchido por:</label>
+                    <input class="" type="text" name="" id="">
+                </span>
+                <span class="input-campo">
+                    <label for="">E-mail:</label>
+                    <input class="" type="text" name="" id="">
+                </span>
+                <span class="input-campo">
+                    <label for="">Telefone:</label>
+                    <input class="" type="text" name="" id="">
+                </span>
             </div>
         </section>
     </main>
