@@ -101,6 +101,10 @@
         @apply border-b-[1px] border-neutral-300 w-full p-2
     }
 
+    .celula-add-linha {
+        @apply flex text-orange-500 font-semibold
+    }
+
     #concorrentes .container {
         @apply mb-8 last:mb-0
     }
