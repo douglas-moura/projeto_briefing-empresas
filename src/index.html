@@ -22,7 +22,7 @@
                     </span>
                     <span class="input-campo">
                         <label for="">Vendas em 12 meses:</label>
-                        <input class="" type="text" name="vendas" id="vendas">
+                        <input class="format-reais money-1" type="text" name="vendas" id="vendas">
                     </span>
                     <span class="input-campo">
                         <label class="" for="">Mercado:</label>
@@ -30,23 +30,21 @@
                     </span>
                     <span class="input-campo">
                         <label for="">Margem bruta:</label>
-                        <input class="" type="text" name="margem" id="margem">
+                        <input class="percent" type="text" name="margem" id="margem">
                     </span>
                     <span class="input-campo">
                         <label for="">Meta (%):</label>
-                        <input class="" type="text" name="meta" id="meta">
+                        <input class="percent" type="text" name="meta" id="meta">
                     </span>
                     <span class="input-campo">
                         <label for="">Participação de mercado:</label>
-                        <input class="" type="text" name="participacao" id="participacao">
+                        <input class="percent" type="text" name="participacao" id="participacao">
                     </span>
                     <span class="input-campo">
                         <label for="">Cresc. do ano anterior:</label>
-                        <input class="" type="text" name="crescimento" id="crescimento">
+                        <input class="percent" type="text" name="crescimento" id="crescimento">
                     </span>
                 </div>
-            </section>
-            <section id="publicos">
                 <div class="container tabelas">
                     <table>
                         <thead>
@@ -58,13 +56,11 @@
                             </tr>
                         </thead>
                         <tbody id="tab-publ-int">
-                            <tr id="linha-int-0">
-                                <!-- linhas ext renderizadas aqui -->
-                            </tr>
+                            <!-- linhas ext renderizadas aqui -->
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td id="add-linha-publ-int" class="linha-tab cursor-pointer celula-add-linha" colspan="4">
+                                <td id="add-linha-publ-int" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
                                     <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
                                     Adicionar linha
                                 </td>
@@ -81,13 +77,11 @@
                             </tr>
                         </thead>
                         <tbody id="tab-publ-ext">
-                            <tr id="linha-ext-0">
-                                <!-- linhas ext renderizadas aqui -->
-                            </tr>
+                            <!-- linhas ext renderizadas aqui -->
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td id="add-linha-publ-ext" class="linha-tab cursor-pointer celula-add-linha" colspan="4">
+                                <td id="add-linha-publ-ext" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
                                     <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
                                     Adicionar linha
                                 </td>
@@ -100,7 +94,7 @@
                 <div class="container">
                     <h3 class="titulo-sessao">Descreva as caracteristicas do seu mercado:</h3>
                     <span class="input-campo">
-                        <textarea name="descr-mercado" id="descr-mercado" cols="30" rows="5"></textarea>
+                        <textarea name="descr-mercado" id="descr-mercado" cols="30" rows="7"></textarea>
                     </span>
                 </div>
                 <div class="container">
@@ -112,47 +106,23 @@
                                 <th class="titulo-tab w-2/12">Particip. de mercado:</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="linha-tab input-tab-intern">
-                                    <input type="text" name="conc-nome-0" id="conc-nome-0" placeholder="Ex.: Nome Empresa">
-                                </td>
-                                <td class="linha-tab input-tab-intern">
-                                    <input type="text" name="conc-acoes-0" id="conc-acoes-0" placeholder="">
-                                </td>
-                                <td class="linha-tab input-tab-intern">
-                                    <input type="text" name="conc-partic-0" id="conc-partic-0" placeholder="Ex.: 5%">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="linha-tab input-tab-intern">
-                                    <input type="text" name="conc-nome-1" id="conc-nome-1" placeholder="Ex.: Nome Empresa">
-                                </td>
-                                <td class="linha-tab input-tab-intern">
-                                    <input type="text" name="conc-acoes-1" id="conc-acoes-1" placeholder="">
-                                </td>
-                                <td class="linha-tab input-tab-intern">
-                                    <input type="text" name="conc-partic-1" id="conc-partic-1" placeholder="Ex.: 5%">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="linha-tab input-tab-intern">
-                                    <input type="text" name="conc-nome-2" id="conc-nome-2" placeholder="Ex.: Nome Empresa">
-                                </td>
-                                <td class="linha-tab input-tab-intern">
-                                    <input type="text" name="conc-acoes-2" id="conc-acoes-2" placeholder="">
-                                </td>
-                                <td class="linha-tab input-tab-intern">
-                                    <input type="text" name="conc-partic-2" id="conc-partic-2" placeholder="Ex.: 5%">
-                                </td>
-                            </tr>
+                        <tbody id="tab-conc">
+                            <!-- linhas ultimas camps renderizadas aqui -->
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <td id="add-linha-conc" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
+                                    <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                    Adicionar linha
+                                </td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
                 <div class="container mb-4">
                     <h4>Comentários e observações importantes:</h4>
                     <span class="input-campo">
-                        <textarea name="conc-obs" id="conc-obs" cols="30" rows="5"></textarea>
+                        <textarea name="conc-obs" id="conc-obs" cols="30" rows="3"></textarea>
                     </span>
                 </div>
             </section>
@@ -174,7 +144,7 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td id="add-linha-ult-camp" class="linha-tab cursor-pointer celula-add-linha" colspan="4">
+                                <td id="add-linha-ult-camp" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
                                     <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
                                     Adicionar linha
                                 </td>
@@ -196,12 +166,22 @@
                     </span>
                     <span class="input-campo">
                         <label for="">Telefone:</label>
-                        <input class="" type="text" name="tel" id="tel">
+                        <input class="phone" type="text" name="tel" id="tel">
                     </span>
                 </div>
             </section>
         </main>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
         <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
         <script src="./index.ts" type="text/javascript" charset="utf-8"></script>
+        <script>
+            $(document).ready(function() {
+                $('.phone').mask('(00) 00000-0000');
+                $('.percent').mask('##0,0%', {reverse: true});
+                $('.money-1').mask('R$ #.##0.000,00', {reverse: true});
+                $('.money-2').mask('R$ #0.##0,00', {reverse: true});
+            });
+        </script>
     </body>
 </html>
