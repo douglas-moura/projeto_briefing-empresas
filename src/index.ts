@@ -1,4 +1,6 @@
 import './assets/css/style.css'
+import $ from 'jquery';
+import 'jquery-mask-plugin';
 import { linhaPublicoAlvo, linhaUltimasCamp, linhaConcorrente } from './assets/helpers/components'
 
 // Adicionar linha na tabela de públicos INTERNOS
@@ -31,6 +33,16 @@ const criarLinha = (tabBodyId: string, tipo?: string): void => {
     } else {   
         tabBody.appendChild(linhaUltimasCamp(tabBody.children.length))
     }
+    mascaraInput()
+}
+
+const mascaraInput = () => {
+    $(document).ready(function() {
+        $('.phone').mask('(00) 00000-0000')
+        $('.percent').mask('##0,0%', {reverse: true})
+        $('.money-1').mask('R$ #.##0.000,00', {reverse: true})
+        $('.money-2').mask('R$ #0.##0,00', {reverse: false})
+    })
 }
 
 window.addEventListener("DOMContentLoaded", (): void => {
