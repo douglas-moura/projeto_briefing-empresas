@@ -1,6 +1,7 @@
 import './assets/css/style.css'
 import $ from 'jquery'
 import 'jquery-mask-plugin'
+import emailjs from 'emailjs-com'
 import { BriefingEmpresa, BriefingMercado, Concorrente, Publico, Campanha, BriefingResponsavel } from './assets/helpers/interfaces'
 import { linhaPublicoAlvo, linhaUltimasCamp, linhaConcorrente } from './assets/helpers/components'
 import { getCampanha, getConcorrente, getPublicosAlvo } from './assets/helpers/briefing'
@@ -38,6 +39,7 @@ const criarLinha = (tabBodyId: string, tipo?: string): void => {
     mascaraInput()
 }
 
+// mascaras de inputs
 const mascaraInput = () => {
     $(document).ready(function() {
         $('.phone').mask('(00) 00000-0000')
@@ -80,6 +82,25 @@ const mascaraInput = () => {
 
     console.log(empresa, mercado, campanhas)
 })
+
+emailjs.init('YOUR_USER_ID')
+
+// Função para enviar o formulário
+const enviarEmail = async (form: HTMLFormElement) => {
+    // Cria um objeto com os dados para enviar
+    const data = {
+        //user_name: userName,
+        //user_email: userEmail,
+        //message: message,
+    }
+
+    try {
+        const response = await emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form);
+        console.log('E-mail enviado com sucesso!', response);
+    } catch (error) {
+        console.error('Erro ao enviar o e-mail:', error);
+    }
+}
 
 window.addEventListener("DOMContentLoaded", (): void => {
     // criar uma linha em casa tabela ao carregar a página

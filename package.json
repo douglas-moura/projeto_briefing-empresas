@@ -38,6 +38,7 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "jquery": "^3.7.1",
     "jquery-mask-plugin": "^1.14.16"
   }
