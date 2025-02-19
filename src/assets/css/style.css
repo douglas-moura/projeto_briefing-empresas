@@ -68,8 +68,12 @@
         @apply grid gap-4 mx-auto w-5/6 lg:w-10/12 xl:w-8/12
     }
 
+    .btn {
+        @apply p-4 rounded-lg bg-orange-500 text-white text-xl font-extrabold
+    }
+
     .titulo-sessao {
-        @apply font-semibold text-amber-600
+        @apply font-semibold text-orange-600 mb-4 border-l-4 pl-4 border-orange-600
     }
 
     .input-campo {
@@ -90,7 +94,7 @@
     }
 
     .titulo-tab {
-        @apply text-left p-2
+        @apply text-left p-2 text-sm
     }
 
     .celula-tab {
@@ -102,7 +106,7 @@
     }
 
     .celula-add-linha {
-        @apply flex text-orange-500 font-semibold
+        @apply   text-orange-500 font-semibold
     }
 
     #concorrentes .container {
