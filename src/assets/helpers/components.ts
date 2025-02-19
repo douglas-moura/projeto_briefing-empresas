@@ -1,6 +1,7 @@
 export const linhaPublicoAlvo = (tipo: string, n: number): HTMLTableRowElement => {
     const linha: HTMLTableRowElement = document.createElement('tr')
     linha.setAttribute("id", `linha-${tipo}-${n}`)
+    linha.classList.add(`publico-${tipo}`)
     linha.innerHTML +=
         `
             <td class="celula-tab input-tab-${tipo}">
@@ -22,6 +23,7 @@ export const linhaPublicoAlvo = (tipo: string, n: number): HTMLTableRowElement =
 export const linhaConcorrente = (n: number): HTMLTableRowElement => {
     const linha: HTMLTableRowElement = document.createElement('tr')
     linha.setAttribute("id", `linha-conc-${n}`)
+    linha.classList.add(`linha-concorrente`)
     linha.innerHTML +=
         `
             <tr>
@@ -42,10 +44,11 @@ export const linhaConcorrente = (n: number): HTMLTableRowElement => {
 export const linhaUltimasCamp = (n: number): HTMLTableRowElement => {
     const linha: HTMLTableRowElement = document.createElement('tr')
     linha.setAttribute("id", `linha-ult-camp-${n}`)
+    linha.classList.add(`linha-campanha`)
     linha.innerHTML +=
         `
             <td class="celula-tab">
-                <input type="number" name="ult-camp-ano-${n}" id="ult-camp-ano-${n}" placeholder="Ex.: 2024">
+                <input type="number" name="ult-camp-ano-${n}" id="ult-camp-ano-${n}" maxlength="4" placeholder="Ex.: 2024">
             </td>
             <td class="celula-tab">
                 <input type="text" name="ult-camp-aumento-${n}" id="ult-camp-aumento-${n}" placeholder="Ex.: Aumento nos descontos e sorteio de viagens para copa para titulares e balconistas">

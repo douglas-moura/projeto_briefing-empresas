@@ -10,12 +10,12 @@
             <section>
                 <div class="container my-8">
                     <h1 class="">Modelo simplificado de briefing para Campanhas de Incentivo</h1>
-                    <h4 class="text-red-600">ATENÇÃO: Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</h4>
+                    <h4 class="text-red-500">ATENÇÃO: Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</h4>
                 </div>
             </section>
             <section id="infos-empresa">
                 <div action="" class="container grid-cols-2">
-                    <h3 class="titulo-sessao">Descreva sua empresa:</h3>
+                    <h2 class="titulo-sessao">Descreva sua empresa:</h2>
                     <span class="input-campo col-span-2">
                         <label class="" for="">Empresa:</label>
                         <input class="" type="text" name="empresa" id="empresa">
@@ -61,8 +61,10 @@
                         <tfoot>
                             <tr>
                                 <td id="add-linha-publ-int" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
-                                    <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
-                                    Adicionar linha
+                                    <span>
+                                        <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                        Adicionar linha
+                                    </span>
                                 </td>
                             </tr>
                         </tfoot>
@@ -82,8 +84,10 @@
                         <tfoot>
                             <tr>
                                 <td id="add-linha-publ-ext" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
-                                    <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
-                                    Adicionar linha
+                                    <span>
+                                        <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                        Adicionar linha
+                                    </span>
                                 </td>
                             </tr>
                         </tfoot>
@@ -92,7 +96,7 @@
             </section>
             <section id="concorrentes">
                 <div class="container">
-                    <h3 class="titulo-sessao">Descreva as caracteristicas do seu mercado:</h3>
+                    <h2 class="titulo-sessao">Descreva as caracteristicas do seu mercado:</h2>
                     <span class="input-campo">
                         <textarea name="descr-mercado" id="descr-mercado" cols="30" rows="7"></textarea>
                     </span>
@@ -112,8 +116,10 @@
                         <tfoot>
                             <tr>
                                 <td id="add-linha-conc" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
-                                    <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
-                                    Adicionar linha
+                                    <span>
+                                        <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                        Adicionar linha
+                                    </span>
                                 </td>
                             </tr>
                         </tfoot>
@@ -128,13 +134,13 @@
             </section>
             <section id="outras-campanhas">
                 <div class="container">
-                    <h3 class="titulo-sessao">Últimas campanhas:</h3>
+                    <h2 class="titulo-sessao">Últimas campanhas:</h2>
                     <table>
                         <thead>
                             <tr>
-                                <th class="titulo-tab w-2/12">Ano:</th>
-                                <th class="titulo-tab w-7/12">Descreva o sistema da campanha:</th>
-                                <th class="titulo-tab w-1/12">Período:</th>
+                                <th class="titulo-tab w-1/12">Ano:</th>
+                                <th class="titulo-tab w-6/12">Descreva o sistema da campanha:</th>
+                                <th class="titulo-tab w-2/12">Período:</th>
                                 <th class="titulo-tab w-1/12">Meta (%):</th>
                                 <th class="titulo-tab w-1/12">Cresc. (%):</th>
                             </tr>
@@ -145,8 +151,10 @@
                         <tfoot>
                             <tr>
                                 <td id="add-linha-ult-camp" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
-                                    <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
-                                    Adicionar linha
+                                    <span>
+                                        <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                        Adicionar linha
+                                    </span>
                                 </td>
                             </tr>
                         </tfoot>
@@ -155,7 +163,7 @@
             </section>
             <section>
                 <div class="container grid-cols-3">
-                    <h3 class="titulo-sessao col-span-3">Responsável pelo Briefing:</h3>
+                    <h2 class="titulo-sessao col-span-3">Responsável pelo Briefing:</h2>
                     <span class="input-campo">
                         <label for="">Preenchido por:</label>
                         <input class="" type="text" name="nome" id="nome">
@@ -168,6 +176,11 @@
                         <label for="">Telefone:</label>
                         <input class="phone" type="text" name="tel" id="tel">
                     </span>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <button class="btn" id="btn-enviar-form">Enviar</button>
                 </div>
             </section>
         </main>

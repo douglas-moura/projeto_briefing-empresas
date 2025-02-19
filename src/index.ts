@@ -1,7 +1,9 @@
 import './assets/css/style.css'
-import $ from 'jquery';
-import 'jquery-mask-plugin';
+import $ from 'jquery'
+import 'jquery-mask-plugin'
+import { BriefingEmpresa, BriefingMercado, Concorrente, Publico, Campanha, BriefingResponsavel } from './assets/helpers/interfaces'
 import { linhaPublicoAlvo, linhaUltimasCamp, linhaConcorrente } from './assets/helpers/components'
+import { getCampanha, getConcorrente, getPublicosAlvo } from './assets/helpers/briefing'
 
 // Adicionar linha na tabela de públicos INTERNOS
 (document.getElementById('add-linha-publ-int') as HTMLTableCellElement).addEventListener('click', (): void => {
@@ -42,8 +44,42 @@ const mascaraInput = () => {
         $('.percent').mask('##0,0%', {reverse: true})
         $('.money-1').mask('R$ #.##0.000,00', {reverse: true})
         $('.money-2').mask('R$ #0.##0,00', {reverse: false})
+        $('.money-3').mask('R$ #.##0,00', {reverse: true})
     })
 }
+
+(document.getElementById('btn-enviar-form') as HTMLButtonElement).addEventListener('click', () => {
+    const publicosInternos: Publico[] = getPublicosAlvo((document.getElementsByClassName('publico-int') as HTMLCollectionOf<HTMLTableRowElement>), "Int")
+    const publicosExternos: Publico[] = getPublicosAlvo((document.getElementsByClassName('publico-ext') as HTMLCollectionOf<HTMLTableRowElement>), "Ext")
+    const listaConcorrentes: Concorrente[] = getConcorrente((document.getElementsByClassName('linha-concorrente') as HTMLCollectionOf<HTMLTableRowElement>))
+    const campanhas: Campanha[] = getCampanha((document.getElementsByClassName('linha-campanha') as HTMLCollectionOf<HTMLTableRowElement>))
+    
+    const empresa: BriefingEmpresa = {
+        nome: (document.getElementById('empresa') as HTMLInputElement).value,
+        vendasDozeMeses: (document.getElementById('vendas') as HTMLInputElement).value,
+        mercado: (document.getElementById('mercado') as HTMLInputElement).value,
+        margemBruta: (document.getElementById('margem') as HTMLInputElement).value,
+        meta: (document.getElementById('meta') as HTMLInputElement).value,
+        particMercado: (document.getElementById('participacao') as HTMLInputElement).value,
+        cresc: (document.getElementById('crescimento') as HTMLInputElement).value,
+        publicosAlvoInt: publicosInternos,
+        publicosAlvoExt: publicosExternos
+    }
+
+    const mercado: BriefingMercado = {
+        descr: (document.getElementById('descr-mercado') as HTMLTextAreaElement).value,
+        concorrentes: listaConcorrentes,
+        obs: (document.getElementById('conc-obs') as HTMLTextAreaElement).value,
+    }
+
+    const responsavel: BriefingResponsavel = {
+        nome: (document.getElementById('nome') as HTMLInputElement).value,
+        email: (document.getElementById('email') as HTMLInputElement).value,
+        tel: (document.getElementById('tel') as HTMLInputElement).value,
+    }
+
+    console.log(empresa, mercado, campanhas)
+})
 
 window.addEventListener("DOMContentLoaded", (): void => {
     // criar uma linha em casa tabela ao carregar a página
