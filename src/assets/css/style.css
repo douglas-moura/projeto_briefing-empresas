@@ -15,7 +15,7 @@
     }
     
     section {
-        @apply w-full flex flex-col py-8
+        @apply w-full flex flex-col py-12
     }
     
     h1 {
@@ -87,6 +87,10 @@
     .input-campo input,
     .input-campo textarea {
         @apply border border-neutral-300 rounded p-3 outline-0 text-sm w-full
+    }
+
+    .input-reais {
+        @apply pl-8 !important
     }
 
     .tabelas {

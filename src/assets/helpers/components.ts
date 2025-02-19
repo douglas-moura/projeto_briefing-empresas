@@ -11,7 +11,10 @@ export const linhaPublicoAlvo = (tipo: string, n: number): HTMLTableRowElement =
                 <input type="number" name="publ-${tipo}-qtd-${n}" id="publ-${tipo}-qtd-${n}" placeholder="Ex.: 2">
             </td>
             <td class="celula-tab input-tab-${tipo}">
-                <input type="text" name="publ-${tipo}-renda-${n}" id="publ-${tipo}-renda-${n}" placeholder="Ex.: R$ 5.000" class="money-2">
+                <span class="relative items-center">
+                    <input type="text" name="publ-${tipo}-renda-${n}" id="publ-${tipo}-renda-${n}" placeholder="Ex.: 5.000" class="input-reais money-1">
+                    <p class="absolute ml-3 text-xs">R$</p>
+                </span>
             </td>
             <td class="celula-tab input-tab-${tipo}">
                 <input type="text" name="publ-${tipo}-obs-${n}" id="publ-${tipo}-obs-${n}" placeholder="">

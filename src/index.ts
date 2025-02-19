@@ -42,9 +42,9 @@ const mascaraInput = () => {
     $(document).ready(function() {
         $('.phone').mask('(00) 00000-0000')
         $('.percent').mask('##0,0%', {reverse: true})
-        $('.money-1').mask('R$ #.##0.000,00', {reverse: true})
-        $('.money-2').mask('R$ #0.##0,00', {reverse: false})
-        $('.money-3').mask('R$ #.##0,00', {reverse: true})
+        $('.money-1').mask('#.##0.000,00', {reverse: true})
+        $('.money-2').mask('#0.##0,00', {reverse: false})
+        $('.money-3').mask('#.##0,00', {reverse: true})
     })
 }
 
