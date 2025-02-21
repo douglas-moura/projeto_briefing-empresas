@@ -5,16 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Briefing GTX100</title>
     </head>
-    <body>
+    <body class="bg-neutral-100">
         <main class="pb-32">
             <section>
-                <div class="container my-8">
-                    <h1 class="">Modelo simplificado de briefing para Campanhas de Incentivo</h1>
-                    <h4 class="text-red-500">ATENÇÃO: Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</h4>
+                <div class="container grid-cols-3 my-8">
+                    <div class="col-span-2 pr-16">
+                        <h1 class="">Modelo simplificado de briefing para Campanhas de Incentivo</h1>
+                        <h5 class="text-red-500 mt-4">ATENÇÃO: Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</h5>
+                    </div>
+                    <div class="">
+                        <span class="flex-row-reverse">
+                            <img src="./assets/img/logo-gtx100.png" class="w-2/3" alt="Logotipo GTX100 Incentivos">
+                        </span>
+                    </div>
                 </div>
             </section>
-            <section id="infos-empresa">
-                <div action="" class="container grid-cols-2">
+            <section id="infos-empresa" class="">
+                <div action="" class="container grid-cols-2 bg-white p-12 rounded-xl shadow-xl">
                     <h2 class="titulo-sessao">Descreva sua empresa:</h2>
                     <span class="input-campo col-span-2">
                         <label class="" for="">Empresa:</label>
@@ -45,125 +52,127 @@
                         <label for="">Cresc. do ano anterior:</label>
                         <input class="percent" type="text" name="crescimento" id="crescimento">
                     </span>
-                </div>
-                <div class="container tabelas">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="titulo-tab w-3/12">Públicos alvo internos:</th>
-                                <th class="titulo-tab w-1/12">Qtd.:</th>
-                                <th class="titulo-tab w-3/12">Renda mensal média:</th>
-                                <th class="titulo-tab w-5/12">Observações:</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tab-publ-int">
-                            <!-- linhas ext renderizadas aqui -->
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td id="add-linha-publ-int" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
-                                    <span>
-                                        <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
-                                        Adicionar linha
-                                    </span>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="titulo-tab w-3/12">Públicos alvo externos:</th>
-                                <th class="titulo-tab w-1/12">Qtd.:</th>
-                                <th class="titulo-tab w-3/12">Renda mensal média:</th>
-                                <th class="titulo-tab w-5/12">Observações:</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tab-publ-ext">
-                            <!-- linhas ext renderizadas aqui -->
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td id="add-linha-publ-ext" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
-                                    <span>
-                                        <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
-                                        Adicionar linha
-                                    </span>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
+                    <div class="tabelas col-span-2">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="titulo-tab w-3/12">Públicos alvo internos:</th>
+                                    <th class="titulo-tab w-1/12">Qtd.:</th>
+                                    <th class="titulo-tab w-3/12">Renda mensal média:</th>
+                                    <th class="titulo-tab w-5/12">Observações:</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tab-publ-int">
+                                <!-- linhas ext renderizadas aqui -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td id="add-linha-publ-int" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
+                                        <span>
+                                            <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                            Adicionar linha
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="titulo-tab w-3/12">Públicos alvo externos:</th>
+                                    <th class="titulo-tab w-1/12">Qtd.:</th>
+                                    <th class="titulo-tab w-3/12">Renda mensal média:</th>
+                                    <th class="titulo-tab w-5/12">Observações:</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tab-publ-ext">
+                                <!-- linhas ext renderizadas aqui -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td id="add-linha-publ-ext" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
+                                        <span>
+                                            <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                            Adicionar linha
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
             </section>
             <section id="concorrentes">
-                <div class="container">
+                <div class="container bg-white p-12 rounded-xl shadow-xl">
                     <h2 class="titulo-sessao">Descreva as caracteristicas do seu mercado:</h2>
                     <span class="input-campo">
-                        <textarea name="descr-mercado" id="descr-mercado" cols="30" rows="7"></textarea>
+                        <textarea name="descr-mercado" id="descr-mercado" cols="30" rows="5"></textarea>
                     </span>
-                </div>
-                <div class="container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="titulo-tab w-3/12">Concorrentes:</th>
-                                <th class="titulo-tab w-7/12">Suas ações e caracteristicas principais:</th>
-                                <th class="titulo-tab w-2/12">Particip. de mercado:</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tab-conc">
-                            <!-- linhas ultimas camps renderizadas aqui -->
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td id="add-linha-conc" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
-                                    <span>
-                                        <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
-                                        Adicionar linha
-                                    </span>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <div class="container mb-4 border border-neutral-300 p-4 rounded">
-                    <h4>Comentários e observações importantes:</h4>
-                    <span class="input-campo">
-                        <textarea name="conc-obs" id="conc-obs" cols="30" rows="3"></textarea>
-                    </span>
+                    <div class="tabelas">
+                        <table class="">
+                            <thead>
+                                <tr>
+                                    <th class="titulo-tab w-3/12">Concorrentes:</th>
+                                    <th class="titulo-tab w-7/12">Suas ações e caracteristicas principais:</th>
+                                    <th class="titulo-tab w-2/12">Particip. de mercado:</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tab-conc">
+                                <!-- linhas ultimas camps renderizadas aqui -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td id="add-linha-conc" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
+                                        <span>
+                                            <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                            Adicionar linha
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="mt-4">
+                        <h5 class="mb-2">Comentários e observações importantes:</h5>
+                        <span class="input-campo">
+                            <textarea name="conc-obs" id="conc-obs" cols="30" rows="2"></textarea>
+                        </span>
+                    </div>
                 </div>
             </section>
             <section id="outras-campanhas">
-                <div class="container">
+                <div class="container bg-white p-12 rounded-xl shadow-xl">
                     <h2 class="titulo-sessao">Últimas campanhas:</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="titulo-tab w-1/12">Ano:</th>
-                                <th class="titulo-tab w-6/12">Descreva o sistema da campanha:</th>
-                                <th class="titulo-tab w-2/12">Período:</th>
-                                <th class="titulo-tab w-1/12">Meta (%):</th>
-                                <th class="titulo-tab w-1/12">Cresc. (%):</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tab-ult-camp">
-                            <!-- linhas ultimas camps renderizadas aqui -->
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td id="add-linha-ult-camp" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
-                                    <span>
-                                        <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
-                                        Adicionar linha
-                                    </span>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
+                    <div class="tabelas">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="titulo-tab w-1/12">Ano:</th>
+                                    <th class="titulo-tab w-5/12">Descreva o sistema da campanha:</th>
+                                    <th class="titulo-tab w-2/12">Período:</th>
+                                    <th class="titulo-tab w-2/12">Meta (%):</th>
+                                    <th class="titulo-tab w-2/12">Cresc. (%):</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tab-ult-camp">
+                                <!-- linhas ultimas camps renderizadas aqui -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td id="add-linha-ult-camp" class="celula-tab cursor-pointer celula-add-linha" colspan="4">
+                                        <span>
+                                            <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                            Adicionar linha
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
             </section>
             <section>
-                <div class="container grid-cols-3">
+                <div class="container grid-cols-3 bg-white p-12 rounded-xl shadow-xl">
                     <h2 class="titulo-sessao col-span-3">Responsável pelo Briefing:</h2>
                     <span class="input-campo">
                         <label for="">Preenchido por:</label>
