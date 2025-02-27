@@ -89,7 +89,6 @@ emailjs.init('1oStTlvolPOmGxroU')
 const enviarEmail = async (empresa: BriefingEmpresa, mercado: BriefingMercado, campanhas: Campanha[], responsavel: BriefingResponsavel) => {
     // Enviar o e-mail usando seu Service ID e Template ID
     try {
-        console.log(empresa.publicosAlvoInt)
         const response = await emailjs.send("service_d1s9app", "template_ulstklq", {
             respNome: responsavel.nome,
             respEmail: responsavel.email,
@@ -107,7 +106,10 @@ const enviarEmail = async (empresa: BriefingEmpresa, mercado: BriefingMercado, c
             publExterno: empresa.publicosAlvoExt,
 
             descrMercado: mercado.descr,
+            concorr: mercado.concorrentes,
             obsComentMercado: mercado.obs,
+
+            ultimasCamps: campanhas
         })
         console.log('E-mail enviado com sucesso!', response)
     } catch (error) {
