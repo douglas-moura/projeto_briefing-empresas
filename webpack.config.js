@@ -5,6 +5,7 @@ const webpack = require('webpack');
 
 module.exports = {
     mode: 'development', // Pode ser 'development' ou 'production'
+    //mode: 'production', // Pode ser 'development' ou 'production'
     entry: './src/index.ts', // Arquivo de entrada principal
     output: {
         filename: 'index.js', // Nome do arquivo gerado

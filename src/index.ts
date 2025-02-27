@@ -80,25 +80,38 @@ const mascaraInput = () => {
         tel: (document.getElementById('tel') as HTMLInputElement).value,
     }
 
-    console.log(empresa, mercado, campanhas)
+    enviarEmail(empresa, mercado, campanhas, responsavel)
 })
 
-emailjs.init('YOUR_USER_ID')
+emailjs.init('1oStTlvolPOmGxroU')
 
 // Função para enviar o formulário
-const enviarEmail = async (form: HTMLFormElement) => {
-    // Cria um objeto com os dados para enviar
-    const data = {
-        //user_name: userName,
-        //user_email: userEmail,
-        //message: message,
-    }
-
+const enviarEmail = async (empresa: BriefingEmpresa, mercado: BriefingMercado, campanhas: Campanha[], responsavel: BriefingResponsavel) => {
+    // Enviar o e-mail usando seu Service ID e Template ID
     try {
-        const response = await emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form);
-        console.log('E-mail enviado com sucesso!', response);
+        console.log(empresa.publicosAlvoInt)
+        const response = await emailjs.send("service_d1s9app", "template_ulstklq", {
+            respNome: responsavel.nome,
+            respEmail: responsavel.email,
+            respTel: responsavel.tel,
+
+            empresaNome: empresa.nome,
+            vendaDozeMeses: empresa.vendasDozeMeses,
+            mercado: empresa.mercado,
+            margemBruta: empresa.margemBruta,
+            meta: empresa.meta,
+            particMercado: empresa.particMercado,
+            crescAnoAnterior: empresa.cresc,
+
+            publInterno: empresa.publicosAlvoInt,
+            publExterno: empresa.publicosAlvoExt,
+
+            descrMercado: mercado.descr,
+            obsComentMercado: mercado.obs,
+        })
+        console.log('E-mail enviado com sucesso!', response)
     } catch (error) {
-        console.error('Erro ao enviar o e-mail:', error);
+        console.error('Erro ao enviar e-mail', error)
     }
 }
 
