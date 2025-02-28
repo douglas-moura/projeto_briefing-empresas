@@ -3,8 +3,6 @@ import { Publico, Concorrente, Campanha } from "./interfaces"
 export const getPublicosAlvo = (linhas: HTMLCollectionOf<HTMLTableRowElement>, publicoTipo: string): Publico[] => {
     const data: Publico[] = []
     
-    console.log((linhas[0].children[2].children[0].children[0] as HTMLInputElement).value)
-
     for (let i = 0; i < linhas.length; i++) {
         let publico: Publico = { tipo: publicoTipo, cargo: "", qtd: 0, renda: "", obs: "", }
 

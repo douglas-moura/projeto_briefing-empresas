@@ -50,6 +50,7 @@ const mascaraInput = () => {
     })
 }
 
+// ao clicar no botão de envio, captura os valores os valores dos campos e trata eles
 (document.getElementById('btn-enviar-form') as HTMLButtonElement).addEventListener('click', () => {
     const publicosInternos: Publico[] = getPublicosAlvo((document.getElementsByClassName('publico-int') as HTMLCollectionOf<HTMLTableRowElement>), "Int")
     const publicosExternos: Publico[] = getPublicosAlvo((document.getElementsByClassName('publico-ext') as HTMLCollectionOf<HTMLTableRowElement>), "Ext")
@@ -83,6 +84,7 @@ const mascaraInput = () => {
     enviarEmail(empresa, mercado, campanhas, responsavel)
 })
 
+// EmailJS
 emailjs.init('1oStTlvolPOmGxroU')
 
 // Função para enviar o formulário
@@ -112,11 +114,17 @@ const enviarEmail = async (empresa: BriefingEmpresa, mercado: BriefingMercado, c
             ultimasCamps: campanhas
         })
         console.log('E-mail enviado com sucesso!', response)
+        document.getElementById('modal-sucess')!.classList.remove('translate-y-full')
     } catch (error) {
         console.error('Erro ao enviar e-mail', error)
     }
 }
 
+const mensagemSucesso = () => {
+    
+}
+
+// ao carregar a pagina
 window.addEventListener("DOMContentLoaded", (): void => {
     // criar uma linha em casa tabela ao carregar a página
     criarLinha('tab-publ-int', 'int')
