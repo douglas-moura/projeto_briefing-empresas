@@ -22,6 +22,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.3",
     "@types/jquery": "^3.5.32",
+    "@types/validator": "^13.12.2",
     "autoprefixer": "^10.4.20",
     "css-loader": "^7.1.2",
     "html-loader": "^5.1.0",
@@ -40,6 +41,7 @@
   "dependencies": {
     "emailjs-com": "^3.2.0",
     "jquery": "^3.7.1",
-    "jquery-mask-plugin": "^1.14.16"
+    "jquery-mask-plugin": "^1.14.16",
+    "validator": "^13.12.0"
   }
 }

@@ -132,6 +132,10 @@
         @apply text-xs mt-4 text-center 
     }
 
+    .error {
+        @apply absolute text-red-600 text-xs -bottom-4
+    }
+
     #concorrentes .container {
         @apply mb-8 last:mb-0
     }

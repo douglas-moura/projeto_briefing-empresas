@@ -2,6 +2,7 @@ import './assets/css/style.css'
 import $ from 'jquery'
 import 'jquery-mask-plugin'
 import emailjs from 'emailjs-com'
+import validator from 'validator'
 import { BriefingEmpresa, BriefingMercado, Concorrente, Publico, Campanha, BriefingResponsavel } from './assets/helpers/interfaces'
 import { linhaPublicoAlvo, linhaUltimasCamp, linhaConcorrente } from './assets/helpers/components'
 import { getCampanha, getConcorrente, getPublicosAlvo } from './assets/helpers/briefing'
@@ -81,7 +82,24 @@ const mascaraInput = () => {
         tel: (document.getElementById('tel') as HTMLInputElement).value,
     }
 
-    enviarEmail(empresa, mercado, campanhas, responsavel)
+    let valido = true
+
+    // Validar Nome
+    if (responsavel.nome === '') {
+        (document.getElementById('nomeErro') as HTMLSpanElement)!.textContent = 'Nome é obrigatório.'
+        valido = false
+    }
+
+    // Validar E-mail
+    if (responsavel.email === '') {
+        (document.getElementById('emailErro') as HTMLSpanElement)!.textContent = 'E-mail é obrigatório.'
+        valido = false
+    } else if (!validator.isEmail(responsavel.email)) {
+        (document.getElementById('emailErro') as HTMLSpanElement)!.textContent = 'E-mail inválido.'
+        valido = false
+    }
+
+    if (valido) enviarEmail(empresa, mercado, campanhas, responsavel)
 })
 
 // EmailJS
@@ -113,8 +131,8 @@ const enviarEmail = async (empresa: BriefingEmpresa, mercado: BriefingMercado, c
 
             ultimasCamps: campanhas
         })
-        console.log('E-mail enviado com sucesso!', response)
-        document.getElementById('modal-sucess')!.classList.remove('translate-y-full')
+        console.log('E-mail enviado com sucesso!', response);
+        (document.getElementById('modal-sucess') as HTMLDivElement)!.classList.remove('translate-y-full')
     } catch (error) {
         console.error('Erro ao enviar e-mail', error)
     }
