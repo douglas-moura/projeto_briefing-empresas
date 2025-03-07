@@ -76,20 +76,24 @@
     }
 
     .input-campo {
-        @apply relative items-center
+        @apply relative flex flex-col
     }
 
     .input-campo label {
-        @apply text-sm text-neutral-400 absolute bg-white px-2 ml-2 h-4 -top-2 font-semibold
+        @apply text-xs mb-2 text-neutral-400 bg-white font-normal
     }
 
     .input-campo input,
     .input-campo textarea {
-        @apply border border-neutral-300 rounded p-3 outline-0 text-sm w-full
+        @apply border border-neutral-300 rounded p-3 outline-0 text-sm w-full bg-neutral-100
     }
 
     .input-reais {
         @apply pl-8 !important
+    }
+
+    .sifrao {
+        @apply absolute bottom-0 m-3 text-xs
     }
 
     .tabelas {
