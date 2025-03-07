@@ -5,53 +5,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Briefing GTX100</title>
     </head>
-    <body class="bg-neutral-50">
+    <body class="bg-white">
         <main class="pb-32">
-            <section>
-                <div class="container grid-cols-3 my-8">
-                    <div class="col-span-2 pr-16">
-                        <h1 class="">Modelo simplificado de briefing para Campanhas de Incentivo</h1>
-                        <h5 class="text-red-500 mt-4">ATENÇÃO: Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</h5>
+            <section class="bg-orange-50 py-16">
+                <div class="container grid-cols-2 my-8">
+                    <div class="">
+                        <img src="./assets/img/logo-gtx100.png" class="w-1/4 mb-8" alt="Logotipo GTX100 Incentivos">
+                        <h1 class="text-neutral-600 uppercase">Modelo simplificado de briefing para Campanhas de Incentivo</h1>
+                        <h5 class="text-white bg-red-500 p-4 rounded mt-20"><strong>ATENÇÃO:</strong> Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</h5>
                     </div>
                     <div class="">
                         <span class="flex-row-reverse">
-                            <img src="./assets/img/logo-gtx100.png" class="w-2/3" alt="Logotipo GTX100 Incentivos">
                         </span>
                     </div>
                 </div>
             </section>
             <section id="infos-empresa" class="">
-                <div action="" class="container grid-cols-2 bg-white p-12 rounded-xl shadow-xl">
-                    <h2 class="titulo-sessao">Descreva sua empresa:</h2>
-                    <span class="input-campo col-span-2">
+                <div class="container grid-cols-2">
+                    <h1 class="titulo-sessao col-span-2">Descreva sua empresa:</h1>
+                    <span class="input-campo">
                         <label class="" for="">Empresa:</label>
                         <input class="" type="text" name="empresa" id="empresa">
                     </span>
                     <span class="input-campo">
-                        <label for="">Vendas em 12 meses:</label>
+                        <label for="">Vendas nos últimos 12 meses:</label>
                         <input class="input-reais money-1" type="text" name="vendas" id="vendas">
                         <p class="sifrao">R$</p>
                     </span>
+                    <!--
                     <span class="input-campo">
                         <label class="" for="">Mercado:</label>
                         <input class="" type="text" name="mercado" id="mercado">
                     </span>
+                    -->
                     <span class="input-campo">
-                        <label for="">Margem bruta:</label>
+                        <label for="">Margem bruta (%):</label>
                         <input class="percent" type="text" name="margem" id="margem">
                     </span>
                     <span class="input-campo">
-                        <label for="">Meta (%):</label>
+                        <label for="">Cresc. previsto no budget (%):</label>
                         <input class="percent" type="text" name="meta" id="meta">
                     </span>
                     <span class="input-campo">
-                        <label for="">Participação de mercado:</label>
+                        <label for="">Participação de mercado (%):</label>
                         <input class="percent" type="text" name="participacao" id="participacao">
                     </span>
                     <span class="input-campo">
-                        <label for="">Cresc. do ano anterior:</label>
+                        <label for="">Cresc. sobre o ano anterior (%):</label>
                         <input class="percent" type="text" name="crescimento" id="crescimento">
                     </span>
+                </div>
+                <div class="container grid-cols-2">
+                    <h1 class="titulo-sessao col-span-2">Informe seus públicos-alvo:</h1>
                     <div class="tabelas col-span-2">
                         <table>
                             <thead>
@@ -103,9 +108,10 @@
                 </div>
             </section>
             <section id="concorrentes">
-                <div class="container bg-white p-12 rounded-xl shadow-xl">
-                    <h2 class="titulo-sessao">Descreva as caracteristicas do seu mercado:</h2>
-                    <span class="input-campo">
+                <div class="container">
+                    <h1 class="titulo-sessao">Descreva as caracteristicas<br>do seu mercado:</h1>
+                    <span class="input-campo">                        
+                        <label for="">Comentários e observações importantes:</label>
                         <textarea name="descr-mercado" id="descr-mercado" cols="30" rows="5"></textarea>
                     </span>
                     <div class="tabelas">
@@ -132,17 +138,19 @@
                             </tfoot>
                         </table>
                     </div>
+                    <!--
                     <div class="mt-4">
                         <h5 class="mb-2">Comentários e observações importantes:</h5>
                         <span class="input-campo">
                             <textarea name="conc-obs" id="conc-obs" cols="30" rows="2"></textarea>
                         </span>
                     </div>
+                    -->
                 </div>
             </section>
             <section id="outras-campanhas">
-                <div class="container bg-white p-12 rounded-xl shadow-xl">
-                    <h2 class="titulo-sessao">Últimas campanhas:</h2>
+                <div class="container">
+                    <h1 class="titulo-sessao">Últimas campanhas:</h1>
                     <div class="tabelas">
                         <table>
                             <thead>
@@ -172,8 +180,8 @@
                 </div>
             </section>
             <section>
-                <div class="container grid-cols-3 bg-white p-12 rounded-xl shadow-xl">
-                    <h2 class="titulo-sessao col-span-3">Responsável pelo Briefing:</h2>
+                <div class="container grid-cols-3">
+                    <h1 class="titulo-sessao col-span-3">Responsável pelo Briefing:</h1>
                     <span class="input-campo">
                         <label for="">Preenchido por:</label>
                         <input class="" type="text" name="nome" id="nome">

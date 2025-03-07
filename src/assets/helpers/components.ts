@@ -1,11 +1,11 @@
-export const linhaPublicoAlvo = (tipo: string, n: number): HTMLTableRowElement => {
+export const linhaPublicoAlvo = (tipo: string, n: number, ex?: string): HTMLTableRowElement => {
     const linha: HTMLTableRowElement = document.createElement('tr')
     linha.setAttribute("id", `linha-${tipo}-${n}`)
     linha.classList.add(`publico-${tipo}`)
     linha.innerHTML +=
         `
             <td class="celula-tab input-tab-${tipo}">
-                <input type="text" name="publ-${tipo}-cargo-${n}" id="publ-${tipo}-cargo-${n}" placeholder="Ex.: Cargo">
+                <input type="text" name="publ-${tipo}-cargo-${n}" id="publ-${tipo}-cargo-${n}" placeholder="Ex.: ${ex ? ex : `Cargo`}">
             </td>
             <td class="celula-tab input-tab-${tipo}">
                 <input type="number" name="publ-${tipo}-qtd-${n}" id="publ-${tipo}-qtd-${n}" placeholder="Ex.: 2">

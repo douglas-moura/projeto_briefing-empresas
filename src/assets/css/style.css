@@ -6,7 +6,7 @@
 
 @layer base {
     * {
-        @apply m-0 p-0 box-border border-0 border-red-500 font-poppins
+        @apply m-0 p-0 box-border border-0 border-purple-500 font-poppins
     }
     
     main {
@@ -56,15 +56,11 @@
     table {
         @apply mb-8 last:mb-0
     }
-
-    table thead {
-        @apply bg-neutral-200
-    }
 }
 
 @layer components {
     .container {
-        @apply grid gap-4 mx-auto w-5/6 lg:w-10/12 xl:w-8/12
+        @apply grid gap-4 mx-auto w-5/6 lg:w-8/12 xl:w-6/12
     }
 
     .btn {
@@ -72,20 +68,22 @@
     }
 
     .titulo-sessao {
-        @apply font-semibold text-orange-600 mb-4 border-l-4 pl-4 border-orange-600
+        @apply font-bold text-orange-600 mt-20 mb-4
     }
 
     .input-campo {
         @apply relative flex flex-col
     }
 
-    .input-campo label {
-        @apply text-xs mb-2 text-neutral-400 bg-white font-normal
+    .input-campo label,
+    .titulo-tab {
+        @apply text-xs pb-1 pl-2 text-neutral-600 font-normal text-left
     }
 
     .input-campo input,
-    .input-campo textarea {
-        @apply border border-neutral-300 rounded p-3 outline-0 text-sm w-full bg-neutral-100
+    .input-campo textarea,
+    .celula-tab input {
+        @apply border border-neutral-200 rounded-lg p-3 outline-0 text-sm w-full text-neutral-800 bg-neutral-50 my-1
     }
 
     .input-reais {
@@ -93,27 +91,23 @@
     }
 
     .sifrao {
-        @apply absolute bottom-0 m-3 text-xs
+        @apply absolute bottom-0 my-4 pl-3 text-sm
     }
 
     .tabelas {
-        @apply border border-neutral-300 p-4 rounded
-    }
-
-    .titulo-tab {
-        @apply text-left p-2 text-sm
+        @apply border-0 border-neutral-300 rounded
     }
 
     .celula-tab {
-        @apply text-left text-sm p-2 font-light
-    }
-
-    .celula-tab input {
-        @apply border-b-[1px] border-neutral-300 w-full p-2
+        @apply text-left text-sm py-0 px-2 font-light first:pl-0 last:pr-0
     }
 
     .celula-add-linha {
-        @apply   text-orange-500 font-semibold
+        @apply pt-2
+    }
+
+    .celula-add-linha span {
+        @apply bg-orange-500 w-48 rounded-lg p-2 text-white font-semibold
     }
 
     .pelicula {

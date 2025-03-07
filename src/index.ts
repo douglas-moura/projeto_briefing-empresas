@@ -28,10 +28,10 @@ import { getCampanha, getConcorrente, getPublicosAlvo } from './assets/helpers/b
 });
 
 // Função para criar linhas e adicionar nas tabelas
-const criarLinha = (tabBodyId: string, tipo?: string): void => {
+const criarLinha = (tabBodyId: string, tipo?: string, exemplo?: string): void => {
     const tabBody = document.getElementById(tabBodyId) as HTMLTableElement    
     if (typeof tipo == 'string') {
-        tabBody.appendChild(linhaPublicoAlvo(tipo, tabBody.children.length))
+        tabBody.appendChild(linhaPublicoAlvo(tipo, tabBody.children.length, exemplo))
     } else if (tabBodyId == 'tab-conc') {   
         tabBody.appendChild(linhaConcorrente(tabBody.children.length))
     } else {   
@@ -145,8 +145,19 @@ const mensagemSucesso = () => {
 // ao carregar a pagina
 window.addEventListener("DOMContentLoaded", (): void => {
     // criar uma linha em casa tabela ao carregar a página
-    criarLinha('tab-publ-int', 'int')
-    criarLinha('tab-publ-ext', 'ext')
+    criarLinha('tab-publ-int', 'int', 'Vendedor')
+    criarLinha('tab-publ-int', 'int', 'Supervisor')
+    criarLinha('tab-publ-int', 'int', 'Gerente')
+
+    criarLinha('tab-publ-ext', 'ext', 'Vendedor Externo')
+    criarLinha('tab-publ-ext', 'ext', 'Representante')
+    criarLinha('tab-publ-ext', 'ext', 'Distribuidor')
+
     criarLinha('tab-conc')
+    criarLinha('tab-conc')
+    criarLinha('tab-conc')
+
+    criarLinha('tab-ult-camp')
+    criarLinha('tab-ult-camp')
     criarLinha('tab-ult-camp')
 })
