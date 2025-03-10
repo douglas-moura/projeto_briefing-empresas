@@ -67,6 +67,10 @@
         @apply p-4 rounded-lg bg-orange-500 text-white text-xl font-extrabold transition-all duration-150 hover:bg-orange-600
     }
 
+    .banner {
+        @apply bg-neutral-800 py-16 bg-[length:70%] bg-no-repeat bg-right overflow-hidden relative
+    }
+
     .titulo-sessao {
         @apply font-bold text-orange-600 mt-20 mb-4
     }

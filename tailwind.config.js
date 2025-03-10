@@ -4,7 +4,11 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx,vue}"
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'notebook': "url('../img/banner-executivo-notebook.jpg')"
+            }
+        },
         fontFamily: {
             'poppins': ['Poppins', 'sans-serif']
         }
