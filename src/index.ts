@@ -3,9 +3,9 @@ import $ from 'jquery'
 import 'jquery-mask-plugin'
 import emailjs from 'emailjs-com'
 import validator from 'validator'
-import { BriefingEmpresa, BriefingMercado, Concorrente, Publico, Campanha, BriefingResponsavel } from './assets/helpers/interfaces'
+import { BriefingEmpresa, BriefingMercado, Concorrente, Publico, Campanha, Produto, BriefingResponsavel } from './assets/helpers/interfaces'
 import { linhaPublicoAlvo, linhaUltimasCamp, linhaConcorrente, linhaProdutoPormovido } from './assets/helpers/components'
-import { getCampanha, getConcorrente, getPublicosAlvo } from './assets/helpers/briefing'
+import { getCampanha, getConcorrente, getProdutos, getPublicosAlvo } from './assets/helpers/briefing'
 
 
 // Adicionar linha na tabela de PRODUTOS
@@ -61,19 +61,22 @@ const mascaraInput = () => {
 
 // ao clicar no botão de envio, captura os valores os valores dos campos e trata eles
 (document.getElementById('btn-enviar-form') as HTMLButtonElement).addEventListener('click', () => {
+    // estas funcões pegam os dados das tabelas e traformam em Arrays
+    const produtosProm: Produto[] = getProdutos((document.getElementsByClassName('linha-produto') as HTMLCollectionOf<HTMLTableRowElement>))
     const publicosInternos: Publico[] = getPublicosAlvo((document.getElementsByClassName('publico-int') as HTMLCollectionOf<HTMLTableRowElement>), "Int")
     const publicosExternos: Publico[] = getPublicosAlvo((document.getElementsByClassName('publico-ext') as HTMLCollectionOf<HTMLTableRowElement>), "Ext")
     const listaConcorrentes: Concorrente[] = getConcorrente((document.getElementsByClassName('linha-concorrente') as HTMLCollectionOf<HTMLTableRowElement>))
     const campanhas: Campanha[] = getCampanha((document.getElementsByClassName('linha-campanha') as HTMLCollectionOf<HTMLTableRowElement>))
     
+    // variaveis que serão enviadas por email
     const empresa: BriefingEmpresa = {
         nome: (document.getElementById('empresa') as HTMLInputElement).value,
         vendasDozeMeses: (document.getElementById('vendas') as HTMLInputElement).value,
-        mercado: (document.getElementById('mercado') as HTMLInputElement).value,
         margemBruta: (document.getElementById('margem') as HTMLInputElement).value,
-        meta: (document.getElementById('meta') as HTMLInputElement).value,
+        crescPrevisto: (document.getElementById('meta') as HTMLInputElement).value,
         particMercado: (document.getElementById('participacao') as HTMLInputElement).value,
-        cresc: (document.getElementById('crescimento') as HTMLInputElement).value,
+        crescAnterior: (document.getElementById('crescimento') as HTMLInputElement).value,
+        produtosPromovidos: produtosProm,
         publicosAlvoInt: publicosInternos,
         publicosAlvoExt: publicosExternos
     }
@@ -81,7 +84,7 @@ const mascaraInput = () => {
     const mercado: BriefingMercado = {
         descr: (document.getElementById('descr-mercado') as HTMLTextAreaElement).value,
         concorrentes: listaConcorrentes,
-        obs: (document.getElementById('conc-obs') as HTMLTextAreaElement).value,
+        //obs: (document.getElementById('conc-obs') as HTMLTextAreaElement).value,
     }
 
     const responsavel: BriefingResponsavel = {
@@ -124,11 +127,12 @@ const enviarEmail = async (empresa: BriefingEmpresa, mercado: BriefingMercado, c
 
             empresaNome: empresa.nome,
             vendaDozeMeses: empresa.vendasDozeMeses,
-            mercado: empresa.mercado,
             margemBruta: empresa.margemBruta,
-            meta: empresa.meta,
+            crescimentoPrevisto: empresa.crescPrevisto,
             particMercado: empresa.particMercado,
-            crescAnoAnterior: empresa.cresc,
+            crescimentoAnterior: empresa.crescAnterior,
+
+            produtos: empresa.produtosPromovidos,
 
             publInterno: empresa.publicosAlvoInt,
             publExterno: empresa.publicosAlvoExt,
@@ -139,7 +143,9 @@ const enviarEmail = async (empresa: BriefingEmpresa, mercado: BriefingMercado, c
 
             ultimasCamps: campanhas
         })
+
         console.log('E-mail enviado com sucesso!', response)
+
         mensagemSucesso()
     } catch (error) {
         console.error('Erro ao enviar e-mail', error)

@@ -1,4 +1,4 @@
-import { Publico, Concorrente, Campanha } from "./interfaces"
+import { Publico, Concorrente, Campanha, Produto } from "./interfaces"
 
 export const getPublicosAlvo = (linhas: HTMLCollectionOf<HTMLTableRowElement>, publicoTipo: string): Publico[] => {
     const data: Publico[] = []
@@ -32,6 +32,7 @@ export const getConcorrente = (linhas: HTMLCollectionOf<HTMLTableRowElement>): C
 
     return data
 }
+
 export const getCampanha = (linhas: HTMLCollectionOf<HTMLTableRowElement>): Campanha[] => {
     const data: Campanha[] = []
 
@@ -45,6 +46,21 @@ export const getCampanha = (linhas: HTMLCollectionOf<HTMLTableRowElement>): Camp
         }
 
         data.push(campanha)
+    }
+
+    return data
+}
+
+export const getProdutos = (linhas: HTMLCollectionOf<HTMLTableRowElement>): Produto[] => {
+    const data: Produto[] = []
+
+    for (let i = 0; i < linhas.length; i++) {
+        let produto: Produto = {
+            nome: (linhas[i].children[0].children[0] as HTMLInputElement).value,
+            objetivo: (linhas[i].children[1].children[0] as HTMLInputElement).value,
+        }
+
+        data.push(produto)
     }
 
     return data

@@ -72,11 +72,11 @@ export const linhaUltimasCamp = (n: number): HTMLTableRowElement => {
 export const linhaProdutoPormovido = (n: number): HTMLTableRowElement => {
     const linha: HTMLTableRowElement = document.createElement('tr')
     linha.setAttribute("id", `linha-produto-${n}`)
-    linha.classList.add(`linha-campanha`)
+    linha.classList.add(`linha-produto`)
     linha.innerHTML +=
         `
             <td class="celula-tab">
-                <input type="number" name="produto-nome-${n}" id="produto-nome-${n}" placeholder="Ex.: Seguros Automotivos">
+                <input type="text" name="produto-nome-${n}" id="produto-nome-${n}" placeholder="Ex.: Seguros Automotivos">
             </td>
             <td class="celula-tab">
                 <input type="text" name="produto-obs-${n}" id="produto-obs-${n}" placeholder="Ex.: Aumentar margem de lucro">

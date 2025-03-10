@@ -20,22 +20,27 @@ export interface Campanha {
     cresc: string | null,
 }
 
+export interface Produto {
+    nome: string | null,
+    objetivo: string | null,
+}
+
 export interface BriefingEmpresa {
     nome: string,
     vendasDozeMeses: string,
-    mercado: string,
     margemBruta: string,
-    meta: string,
+    crescPrevisto: string,
     particMercado: string,
-    cresc: string,
-    publicosAlvoInt: Publico[] | null,
-    publicosAlvoExt: Publico[] | null,
+    crescAnterior: string,
+    publicosAlvoInt?: Publico[] | null,
+    publicosAlvoExt?: Publico[] | null,
+    produtosPromovidos?: Produto[] | null,
 }
 
 export interface BriefingMercado {
     descr: string,
     concorrentes: Concorrente[] | null,
-    obs: string | null,
+    obs?: string | null,
 }
 
 
