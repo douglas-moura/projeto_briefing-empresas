@@ -4,47 +4,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* sm	40rem (640px)	@media (width >= 40rem) { ... } */
+/* md	48rem (768px)	@media (width >= 48rem) { ... } */
+/* lg	64rem (1024px)	@media (width >= 64rem) { ... } */
+/* xl	80rem (1280px)	@media (width >= 80rem) { ... } */
+/* 2xl	96rem (1536px)	@media (width >= 96rem) { ... } */
+
 @layer base {
     * {
         @apply m-0 p-0 box-border border-0 border-purple-500 font-poppins
     }
-    
+
     main {
         @apply min-h-dvh
     }
-    
+
     section {
-        @apply w-full flex flex-col py-6
+        @apply w-full flex flex-col py-4 lg:py-6
     }
-    
+
     h1 {
-        @apply text-4xl font-extrabold text-gray-900
+        @apply font-extrabold text-gray-900 text-2xl lg:text-4xl
     }
-    
+
     h2 {
         @apply text-2xl
     }
-    
+
     h3 {
         @apply text-xl
     }
-    
+
     h4 {
         @apply text-sm
     }
-    
+
     h5 {
         @apply text-xs
     }
-    
+
     span {
         @apply flex
     }
-    
+
     p {
         @apply text-neutral-400
     }
-    
+
     a {
         @apply cursor-pointer
     }
@@ -60,7 +66,7 @@
 
 @layer components {
     .container {
-        @apply grid gap-4 mx-auto w-5/6 lg:w-8/12 xl:w-6/12
+        @apply grid gap-4 mx-auto w-5/6 xl:w-8/12
     }
 
     .btn {
@@ -68,7 +74,7 @@
     }
 
     .banner {
-        @apply bg-neutral-800 py-16 bg-[length:70%] bg-no-repeat bg-right overflow-hidden relative
+        @apply bg-neutral-800 py-16 bg-no-repeat bg-right overflow-hidden relative bg-cover lg:bg-[length:70%]
     }
 
     .titulo-sessao {
@@ -81,13 +87,13 @@
 
     .input-campo label,
     .titulo-tab {
-        @apply text-xs pb-1 pl-2 text-neutral-600 font-semibold text-left
+        @apply text-[10px] pb-1 pl-2 text-neutral-600 font-semibold text-left lg:text-xs
     }
 
     .input-campo input,
     .input-campo textarea,
     .celula-tab input {
-        @apply border border-neutral-200 rounded-lg p-3 outline-0 text-sm w-full text-neutral-800 bg-neutral-50 my-1
+        @apply border border-neutral-200 rounded-lg p-3 outline-0 w-full text-neutral-800 bg-neutral-50 my-1 text-xs lg:text-sm
     }
 
     .input-reais {
@@ -99,7 +105,11 @@
     }
 
     .tabelas {
-        @apply border-0 border-neutral-300 rounded
+        @apply border-0 border-neutral-300 rounded overflow-x-scroll pb-2 relative
+    }
+
+    .tabelas table {
+        @apply min-w-[1000px] lg:min-w-full
     }
 
     .celula-tab {
@@ -131,7 +141,7 @@
     }
 
     .msg-descr {
-        @apply text-xs mt-4 text-center 
+        @apply text-xs mt-4 text-center
     }
 
     .error {
@@ -142,12 +152,17 @@
         @apply text-neutral-400 text-xs font-extralight
     }
 
+    .gradient {
+        @apply absolute h-full w-[20px] right-0 bg-gradient-to-r from-[#ffffff00] to-70% to-red-500
+    }
+
     #concorrentes .container {
         @apply mb-8 last:mb-0
     }
 }
 
 @layer utilities {
+
     /* Para navegadores baseados em WebKit (Chrome, Safari, Edge) */
     input[type="number"]::-webkit-inner-spin-button,
     input[type="number"]::-webkit-outer-spin-button {
@@ -158,5 +173,25 @@
     /* Para Firefox */
     input[type="number"] {
         -moz-appearance: textfield;
+    }
+
+    .tabelas::-webkit-scrollbar {
+        width: .5rem;
+        height: .5rem;
+        /* width of the entire scrollbar */
+    }
+
+    .tabelas::-webkit-scrollbar-track {
+        background: white;
+        /* color of the tracking area */
+    }
+
+    .tabelas::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        /* color of the scroll thumb */
+        border-radius: 20px;
+        /* roundness of the scroll thumb */
+        border: 0px;
+        /* creates padding around scroll thumb */
     }
 }
