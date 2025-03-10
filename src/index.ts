@@ -4,8 +4,14 @@ import 'jquery-mask-plugin'
 import emailjs from 'emailjs-com'
 import validator from 'validator'
 import { BriefingEmpresa, BriefingMercado, Concorrente, Publico, Campanha, BriefingResponsavel } from './assets/helpers/interfaces'
-import { linhaPublicoAlvo, linhaUltimasCamp, linhaConcorrente } from './assets/helpers/components'
+import { linhaPublicoAlvo, linhaUltimasCamp, linhaConcorrente, linhaProdutoPormovido } from './assets/helpers/components'
 import { getCampanha, getConcorrente, getPublicosAlvo } from './assets/helpers/briefing'
+
+
+// Adicionar linha na tabela de PRODUTOS
+(document.getElementById('add-linha-produtos') as HTMLTableCellElement).addEventListener('click', (): void => {
+    criarLinha('tab-produtos')
+});
 
 // Adicionar linha na tabela de públicos INTERNOS
 (document.getElementById('add-linha-publ-int') as HTMLTableCellElement).addEventListener('click', (): void => {
@@ -34,6 +40,8 @@ const criarLinha = (tabBodyId: string, tipo?: string, exemplo?: string): void =>
         tabBody.appendChild(linhaPublicoAlvo(tipo, tabBody.children.length, exemplo))
     } else if (tabBodyId == 'tab-conc') {   
         tabBody.appendChild(linhaConcorrente(tabBody.children.length))
+    } else if (tabBodyId == 'tab-produtos') {   
+        tabBody.appendChild(linhaProdutoPormovido(tabBody.children.length))
     } else {   
         tabBody.appendChild(linhaUltimasCamp(tabBody.children.length))
     }
@@ -131,20 +139,22 @@ const enviarEmail = async (empresa: BriefingEmpresa, mercado: BriefingMercado, c
 
             ultimasCamps: campanhas
         })
-        console.log('E-mail enviado com sucesso!', response);
-        (document.getElementById('modal-sucess') as HTMLDivElement)!.classList.remove('translate-y-full')
+        console.log('E-mail enviado com sucesso!', response)
+        mensagemSucesso()
     } catch (error) {
         console.error('Erro ao enviar e-mail', error)
     }
 }
 
 const mensagemSucesso = () => {
-    
+    (document.getElementById('modal-sucess') as HTMLDivElement)!.classList.remove('translate-y-full')
 }
 
 // ao carregar a pagina
 window.addEventListener("DOMContentLoaded", (): void => {
     // criar uma linha em casa tabela ao carregar a página
+    criarLinha('tab-produtos')
+
     criarLinha('tab-publ-int', 'int', 'Vendedor')
     criarLinha('tab-publ-int', 'int', 'Supervisor')
     criarLinha('tab-publ-int', 'int', 'Gerente')

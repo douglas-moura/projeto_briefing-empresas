@@ -15,8 +15,7 @@
                         <h5 class="text-white bg-red-500 p-4 rounded mt-20"><strong>ATENÇÃO:</strong> Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</h5>
                     </div>
                     <div class="">
-                        <span class="flex-row-reverse">
-                        </span>
+                        <span class="flex-row-reverse"></span>
                     </div>
                 </div>
             </section>
@@ -55,6 +54,36 @@
                         <input class="percent" type="text" name="crescimento" id="crescimento">
                     </span>
                 </div>
+            </section>
+            <section id="produtos">
+                <div class="container">
+                    <h1 class="titulo-sessao">Quais produtos deseja promover:</h1>
+                    <div class="tabelas">
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th class="titulo-tab w-4/12">Produto:</th>
+                                    <th class="titulo-tab w-8/12">Objetivo:</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tab-produtos">
+                                <!-- linhas ext renderizadas aqui -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td id="add-linha-produtos" class="celula-tab cursor-pointer celula-add-linha" colspan="">
+                                        <span>
+                                            <iconify-icon icon="tabler:circle-plus" class="text-xl mr-2"></iconify-icon>
+                                            Adicionar linha
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section id="publicos">
                 <div class="container grid-cols-2">
                     <h1 class="titulo-sessao col-span-2">Informe seus públicos-alvo:</h1>
                     <div class="tabelas col-span-2">
