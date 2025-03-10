@@ -81,7 +81,7 @@
 
     .input-campo label,
     .titulo-tab {
-        @apply text-xs pb-1 pl-2 text-neutral-600 font-normal text-left
+        @apply text-xs pb-1 pl-2 text-neutral-600 font-semibold text-left
     }
 
     .input-campo input,
@@ -136,6 +136,10 @@
 
     .error {
         @apply absolute text-red-600 text-xs -bottom-4
+    }
+
+    .item-lista-final {
+        @apply text-neutral-400 text-xs font-extralight
     }
 
     #concorrentes .container {
