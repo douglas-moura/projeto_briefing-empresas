@@ -10,9 +10,12 @@
             <section class="banner bg-notebook">
                 <div class="container z-40 my-2 pr-24 lg:grid-cols-2 lg:my-8 lg:pr-0">
                     <div class="">
-                        <img src="./assets/img/logo-gtx100-branco.png" class="mb-8 w-1/2 lg:w-1/4" alt="Logotipo GTX100 Incentivos">
-                        <h1 class="text-white mb-4 uppercase text-[22px] leading-[24px] lg:mb-8 lg:text-[42px] lg:leading-[44px]">Briefing para Campanhas de Incentivo</h1>
-                        <p class="text-xs lg:text-sm">Preencha o briefing até o final, agende uma apresentação e concorra a uma viagem internacional inesquecível.</p>
+                        <a href="http://gtx100.com.br/" target="_blank">
+                            <img src="./assets/img/logo-gtx100-branco.png" class="mb-8 w-1/2 lg:w-1/4" alt="Logotipo GTX100 Incentivos">
+                        </a>
+                        <h1 class="text-white mb-4 uppercase text-[22px] leading-[24px] lg:mb-8 lg:text-[42px] lg:leading-[44px]">Formulário Simplificado de Briefing para Campanhas de Incentivos</h1>
+                        <p class="text-xs lg:text-sm">Alinhando estratégias para alcançar os melhores resultados. Preencha e concorra a uma viagem inesquecível com acompanhante.</p>
+                        <!--<button class="btn text-sm py-4 px-8 rounded-full mt-4">Saiba Mais</button>-->
                         <h5 class="text-white text-[10px] bg-red-500 p-2 rounded mt-10 lg:mt-20"><strong>ATENÇÃO:</strong> Os dados são tratados de forma absolutamente confidencial. Se preferir, solicite um NDA</h5>
                     </div>
                     <div class=""></div>
@@ -27,7 +30,7 @@
                         <input class="" type="text" name="empresa" id="empresa">
                     </span>
                     <span class="input-campo">
-                        <label for="">Vendas nos últimos 12 meses:</label>
+                        <label for="">Vendas em 12 meses:</label>
                         <input class="input-reais money-1" type="text" name="vendas" id="vendas">
                         <p class="sifrao">R$</p>
                     </span>
@@ -92,7 +95,7 @@
                                 <tr>
                                     <th class="titulo-tab w-3/12">Públicos alvo internos:</th>
                                     <th class="titulo-tab w-1/12">Qtd.:</th>
-                                    <th class="titulo-tab w-3/12">Renda mensal média:</th>
+                                    <th class="titulo-tab w-3/12">Renda mensal média (R$):</th>
                                     <th class="titulo-tab w-5/12">Observações:</th>
                                 </tr>
                             </thead>
@@ -115,7 +118,7 @@
                                 <tr>
                                     <th class="titulo-tab w-3/12">Públicos alvo externos:</th>
                                     <th class="titulo-tab w-1/12">Qtd.:</th>
-                                    <th class="titulo-tab w-3/12">Renda mensal média:</th>
+                                    <th class="titulo-tab w-3/12">Renda mensal média (R$):</th>
                                     <th class="titulo-tab w-5/12">Observações:</th>
                                 </tr>
                             </thead>
@@ -228,16 +231,21 @@
                 </div>
             </section>
             <section>
-                <div class="container">
-                    <button class="btn" id="btn-enviar-form">Enviar</button>
-                    <!--
+                <div class="container mt-20">
+                    <button class="btn mb-8 w-2/4 mx-auto" id="btn-enviar-form">Enviar</button>
+                    <h3>Observações Importantes:</h3>
                     <ul>
-                        <li class="item-lista-final">Item</li>
-                        <li class="item-lista-final">Item</li>
-                        <li class="item-lista-final">Item</li>
-                        <li class="item-lista-final">Item</li>
+                        <li class="item-lista-final"><strong class="font-semibold">Data limite para envio:</strong> O prazo para envio do briefing é até Fevereiro de 2026.</li>
+                        <li class="item-lista-final"><strong class="font-semibold">Avaliação:</strong> A avaliação será feita pela equipe interna da GTX100.</li>
+                        <li class="item-lista-final"><strong class="font-semibold">Anúncio do vencedor:</strong> O vencedor será anunciado em março de 2026.</li>
+                        <li class="item-lista-final"><strong class="font-semibold">Realização da viagem:</strong> A viagem para Cancún deverá ser realizada até maio de 2026.</li>
+                        <li class="item-lista-final"><strong class="font-semibold">O que está incluído no prêmio:</strong>
+                            <li class="subitem-lista-final">Passagens aéreas de ida e volta para Cancún</li>
+                            <li class="subitem-lista-final">Hospedagem em hotel de [informar tipo de hospedagem ou categoria]</li>
+                        </li>
+                        <li class="item-lista-final"><strong class="font-semibold">Despesas extras:</strong> Quaisquer despesas extras (alimentação, passeios adicionais, taxas de turismo, etc.) não estão incluídas no prêmio e serão de responsabilidade do vencedor.</li>
+                        <li class="item-lista-final"><strong class="font-semibold">Em caso de impossibilidade de viajar:</strong> Caso o vencedor não consiga viajar até maio de 2026, o prêmio poderá ser transferido para outra pessoa ou outra solução será oferecida, conforme as condições do sorteio.</li>
                     </ul>
-                    -->
                 </div>
             </section>
         </main>
