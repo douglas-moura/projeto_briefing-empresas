@@ -129,7 +129,7 @@
     }
 
     .msg-container {
-        @apply m-auto shadow bg-white rounded-2xl p-12 flex flex-col justify-center items-center w-[500px] aspect-video
+        @apply m-auto shadow bg-white rounded-2xl p-12 flex flex-col justify-center items-center w-[400px] aspect-square    
     }
 
     .msg-icone {
@@ -137,7 +137,7 @@
     }
 
     .msg-texto {
-        @apply font-extrabold text-center text-green-500 text-2xl m-0 uppercase
+        @apply font-semibold leading-7 text-center text-green-500 text-2xl m-0 uppercase
     }
 
     .msg-descr {
