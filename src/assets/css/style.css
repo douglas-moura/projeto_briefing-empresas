@@ -153,7 +153,7 @@
     }
 
     .subitem-lista-final {
-        @apply item-lista-final ml-8 flex items-center
+        @apply item-lista-final flex items-center ml-4 lg:ml-8
     }
 
     .gradient {
