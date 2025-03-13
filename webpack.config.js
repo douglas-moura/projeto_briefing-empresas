@@ -16,7 +16,8 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/, // Processa arquivos CSS
-                use: [
+                use: 
+                [
                     'style-loader', // Injeta CSS no DOM durante o desenvolvimento
                     'css-loader', // Lê arquivos CSS
                     'postcss-loader', // Processa o CSS com plugins (incluindo Tailwind)
@@ -41,6 +42,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html', // Arquivo HTML base
             filename: 'index.html', // Nome do arquivo de saída
+            inject: 'body',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/apresentacao.html', // Arquivo HTML base
+            filename: 'pages/apresentacao.html', // Nome do arquivo de saída
+            inject: 'body',
         }),
         new MiniCssExtractPlugin({
             filename: 'style.css', // Nome do CSS extraído

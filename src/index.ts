@@ -89,6 +89,7 @@ const mascaraInput = () => {
 
     const responsavel: BriefingResponsavel = {
         nome: (document.getElementById('nome') as HTMLInputElement).value,
+        cargo: (document.getElementById('cargo') as HTMLInputElement).value,
         email: (document.getElementById('email') as HTMLInputElement).value,
         tel: (document.getElementById('tel') as HTMLInputElement).value,
     }
@@ -122,6 +123,7 @@ const enviarEmail = async (empresa: BriefingEmpresa, mercado: BriefingMercado, c
     try {
         const response = await emailjs.send("service_d1s9app", "template_ulstklq", {
             respNome: responsavel.nome,
+            respCargo: responsavel.cargo,
             respEmail: responsavel.email,
             respTel: responsavel.tel,
 

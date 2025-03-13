@@ -149,11 +149,11 @@
     }
 
     .item-lista-final {
-        @apply text-neutral-500 text-xs font-light my-2
+        @apply text-neutral-500 text-xs font-light my-4
     }
 
     .subitem-lista-final {
-        @apply item-lista-final ml-12 list-disc
+        @apply item-lista-final ml-8 flex items-center
     }
 
     .gradient {

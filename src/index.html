@@ -6,7 +6,7 @@
         <title>Briefing GTX100</title>
     </head>
     <body class="bg-white">
-        <main class="pb-32">
+        <main class="">
             <section class="banner bg-notebook">
                 <div class="container z-40 my-2 pr-24 lg:grid-cols-2 lg:my-8 lg:pr-0">
                     <div class="">
@@ -211,7 +211,7 @@
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="responsavel-briefing">
                 <div class="container lg:grid-cols-2">
                     <h1 class="titulo-sessao lg:col-span-2">Responsável pelo Briefing:</h1>
                     <span class="input-campo">
@@ -234,23 +234,41 @@
                     </span>
                 </div>
             </section>
-            <section>
-                <div class="container mt-20">
-                    <button class="btn mb-8 w-2/4 mx-auto" id="btn-enviar-form">Enviar</button>
-                    <h3>Observações Importantes:</h3>
-                    <ul>
-                        <li class="item-lista-final"><strong class="font-semibold">Data limite para envio:</strong> O prazo para envio do briefing é até Fevereiro de 2026.</li>
-                        <li class="item-lista-final"><strong class="font-semibold">Avaliação:</strong> A avaliação será feita pela equipe interna da GTX100.</li>
-                        <li class="item-lista-final"><strong class="font-semibold">Anúncio do vencedor:</strong> O vencedor será anunciado em março de 2026.</li>
-                        <li class="item-lista-final"><strong class="font-semibold">Realização da viagem:</strong> A viagem para Cancún deverá ser realizada até maio de 2026.</li>
-                        <li class="item-lista-final"><strong class="font-semibold">O que está incluído no prêmio:</strong>
-                            <li class="subitem-lista-final">Passagens aéreas de ida e volta para Cancún</li>
-                            <li class="subitem-lista-final">Hospedagem em hotel de [informar tipo de hospedagem ou categoria]</li>
-                        </li>
-                        <li class="item-lista-final"><strong class="font-semibold">Despesas extras:</strong> Quaisquer despesas extras (alimentação, passeios adicionais, taxas de turismo, etc.) não estão incluídas no prêmio e serão de responsabilidade do vencedor.</li>
-                        <li class="item-lista-final"><strong class="font-semibold">Em caso de impossibilidade de viajar:</strong> Caso o vencedor não consiga viajar até maio de 2026, o prêmio poderá ser transferido para outra pessoa ou outra solução será oferecida, conforme as condições do sorteio.</li>
-                    </ul>
+            <section id="botao-enviar">
+                <div class="container mb-24">
+                    <button class="btn w-2/4 mx-auto" id="btn-enviar-form">Enviar</button>
                 </div>
+            </section>
+            <section id="viagem-infos" class="relative py-32 bg-praia bg-cover bg-no-repeat bg-center">
+                <div class="container grid-cols-2 z-50">
+                    <div class="p-12 bg-white shadow-lg rounded-lg">
+                        <h3 class="flex items-center mb-8 text-neutral-500">
+                            PREMIAÇÃO MELHOR BRIEFING CANCÚN 2026
+                            <iconify-icon icon="fluent-emoji:airplane" class="text-xl ml-2"></iconify-icon>
+                            <iconify-icon icon="fluent-emoji:beach-with-umbrella" class="text-xl"></iconify-icon>
+                        </h3>
+                        <h4 class="text-neutral-500 font-extrabold">Informações Essenciais Sobre a Premição:</h4>
+                        <ul>
+                            <li class="item-lista-final"><strong class="font-semibold">Data limite para envio:</strong> O prazo para envio do briefing é até Fevereiro de 2026.</li>
+                            <li class="item-lista-final"><strong class="font-semibold">Avaliação:</strong> A equipe interna da GTX100 será responsável pela análise dos materiais.</li>
+                            <li class="item-lista-final"><strong class="font-semibold">Anúncio do vencedor:</strong> O resultado será divulgado em março de 2026.</li>
+                            <li class="item-lista-final"><strong class="font-semibold">Realização da viagem:</strong> A viagem para Cancún deverá ser realizada até maio de 2026.</li>
+                            <li class="item-lista-final"><strong class="font-semibold">O que está incluído no prêmio:</strong>
+                                <li class="subitem-lista-final">
+                                    <iconify-icon icon="fluent-emoji:check-mark-button" class="text-base mr-2"></iconify-icon>
+                                    2 passagens aéreas de ida e volta para Cancún
+                                </li>
+                                <li class="subitem-lista-final">
+                                    <iconify-icon icon="fluent-emoji:check-mark-button" class="text-base mr-2"></iconify-icon>
+                                    Hospedagem em hotel
+                                </li>
+                            </li>
+                            <li class="item-lista-final"><strong class="font-semibold">Despesas extras:</strong> Quaisquer custos adicionais (alimentação, passeios, taxas de turismo, etc.) não estão incluídos no prêmio e serão de responsabilidade do vencedor.</li>
+                            <li class="item-lista-final"><strong class="font-semibold">Em caso de impossibilidade de viajar:</strong> Se o vencedor não puder viajar até maio de 2026, o prêmio poderá ser transferido para outra pessoa ou uma alternativa será oferecida, conforme as condições do sorteio.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="absolute hidden z-40 w-full h-full top-0 left-0 bg-gradient-to-b from-[#000000aa] from-60% to-black"></div>
             </section>
         </main>
         <aside>

@@ -6,7 +6,8 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'notebook': "url('../img/banner-executivo-notebook.jpg')"
+                'notebook': "url('../img/banner-executivo-notebook.jpg')",
+                'praia': "url('../img/banner-praia.jpg')",
             }
         },
         fontFamily: {

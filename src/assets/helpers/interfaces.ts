@@ -46,6 +46,7 @@ export interface BriefingMercado {
 
 export interface BriefingResponsavel {
     nome: string,
+    cargo: string,
     email: string,
     tel: string,
 }
